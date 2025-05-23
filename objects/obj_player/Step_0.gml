@@ -51,3 +51,13 @@ if keyboard_check_pressed(ord("W")) && jumps>0
 
 
 #endregion
+
+#region TELEPORTE
+
+if place_meeting(x,y,obj_test_door)
+{
+	x = 1055
+	y = 128
+}
+
+#endregion
