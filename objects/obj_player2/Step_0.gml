@@ -1,6 +1,6 @@
 #region MOVIMENTAÇÃO
 
-move = +keyboard_check(ord("D"))-keyboard_check(ord("A"))
+move = +keyboard_check(vk_right)-keyboard_check(vk_left)
 
 hsp=move*spd
 
@@ -30,6 +30,7 @@ if place_meeting(x,y+vsp,obj_test_block)//Se tocar no bloco
 }
 y+=vsp
 
+
 #endregion
 
 #region PULOS
@@ -43,7 +44,7 @@ else
 	vsp+=grav
 }
  
-if keyboard_check_pressed(ord("W")) && jumps>0
+if keyboard_check_pressed(vk_up) && jumps>0
 {
 	vsp=jspd
 	jumps-=1
