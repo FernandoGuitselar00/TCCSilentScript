@@ -30,7 +30,6 @@ if place_meeting(x,y+vsp,obj_test_block)//Se tocar no bloco
 }
 y+=vsp
 
-
 #endregion
 
 #region PULOS
@@ -58,6 +57,30 @@ if keyboard_check_pressed(vk_up) && jumps>0
 if place_meeting(x,y,obj_test_door)
 {
 	x = 255	y = 160
+}
+
+#endregion
+
+#region MORTE
+
+if alive=true && place_meeting(x,y,obj_player)
+{
+	alive=false
+	deaths+=1
+}
+
+if !alive
+{
+	visible=false
+	x=-10000 //manda para fora da tela (evita bugs)
+}
+
+if !alive && keyboard_check(vk_down)
+{
+	alive=true
+	visible=true
+	x=x_original
+	y=y_original
 }
 
 #endregion

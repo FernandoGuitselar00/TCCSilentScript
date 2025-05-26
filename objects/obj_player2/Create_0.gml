@@ -4,3 +4,7 @@ spd=10//Velocidade
 grav=1//Gravidade
 jspd=-15//Velocidade do pulo
 jumps=2//Quantidade de pulos
+x_original=x
+y_original=y
+alive = true
+deaths = 0
