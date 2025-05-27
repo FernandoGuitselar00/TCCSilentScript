@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"fxs",
-    "path":"folders/Sprites/Entityes/Player/fxs.yy",
+    "name":"FSX",
+    "path":"folders/Sprites/Entityes/Player/FSX.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
