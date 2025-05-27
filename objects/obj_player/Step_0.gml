@@ -47,6 +47,8 @@ if keyboard_check_pressed(ord("W")) && jumps>0
 {
 	vsp=jspd
 	jumps-=1
+	
+	instance_create_layer(x,y +sprite_height / 2, "Instances", obj_jump_fx)
 }
 
 

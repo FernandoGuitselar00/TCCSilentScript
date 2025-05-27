@@ -47,6 +47,8 @@ if keyboard_check_pressed(vk_up) && jumps>0
 {
 	vsp=jspd
 	jumps-=1
+	
+	instance_create_layer(x,y+sprite_height / 2,"Instances", obj_jump_fx)
 }
 
 
@@ -63,16 +65,12 @@ if place_meeting(x,y,obj_test_door)
 
 #region MORTE
 
-if alive=true && place_meeting(x,y,obj_player)
+if alive && place_meeting(x,y,obj_player)
 {
+	instance_create_layer(x,y,"Instances",obj_skull_fx)
 	alive=false
-	deaths+=1
-}
-
-if !alive
-{
 	visible=false
-	x=-10000 //manda para fora da tela (evita bugs)
+	deaths+=1
 }
 
 if !alive && keyboard_check(vk_down)
