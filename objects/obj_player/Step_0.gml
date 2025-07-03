@@ -53,7 +53,7 @@ if place_meeting(x,y+vsp,obj_test_block)
 	vsp=0
 	
 	//Verifica se o personagem está no chão
-	if sign(vsp)>=0
+	if sign(vsp)=0
 	{
 		on_ground=true	
 	}
